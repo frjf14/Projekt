@@ -1,0 +1,516 @@
+/** --------------------------------------------------------------
+ * Typography settings for a default rythm.
+ *
+ */
+
+
+/** --------------------------------------------------------------
+ * Body
+ */
+//body{font:100.01%/1.375 @font-family-helvetica;}
+body {
+  .body-font();
+}
+
+
+/** --------------------------------------------------------------
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: @fontFamilyHeadings;
+  margin-top: 0;
+  margin-bottom: @magicNumber;
+  img {
+    margin: 0;
+  }
+}
+
+h1 {
+  .font-size(@fontSizeH1);
+  font-weight: normal;
+  & ~ h2, & ~ h3, & ~ h4, & ~ h5, & ~ h6 {
+    margin-top: @magicNumber * 2;
+  }
+}
+
+h2 {
+  .font-size(@fontSizeH2);
+  font-weight: normal;
+  & ~ h3 {
+    margin-top: @magicNumber;
+  }
+}
+
+h3 {
+  .font-size(@fontSizeH3);
+  font-weight: normal;
+}
+
+h4 {
+  .font-size(@fontSizeH4);
+  font-weight: normal;
+}
+
+h5 {
+  .font-size(@fontSizeH5);
+}
+
+h6 {
+  .font-size(@fontSizeH6);
+}
+
+/*
+h1{.headings-general();font-size:2.375em;line-height:1.1579;border-bottom:1px solid #ccc;margin-bottom:@magic-number - 1px;}
+h2{.headings-general();font-size:1.875em;line-height:1.4667;border-bottom:1px solid #ccc;margin-bottom:@magic-number - 1px;}
+h3{.headings-general();font-size:1.375em;line-height:1;}
+h4{.headings-general();font-size:1.25em;line-height:1.1;}
+h5{.headings-general();font-size:1em;font-weight:bold;}
+h6{.headings-general();font-size:1em;font-weight:bold;margin-bottom:0;}
+h1 img,h2 img,h3 img,h4 img,h5 img,h6 img{margin:0;}
+*/
+
+
+/** --------------------------------------------------------------
+ * Text elements
+ */
+p {
+  margin-top: 0;
+  margin-bottom: @magicNumber;
+}
+
+small, .small, .smaller {
+  .font-size(@fontSizeSmall);
+}
+
+blockquote {
+  border-left: 2px solid @colorBorderLight;
+  padding-left: 1em;
+  margin-left: 0;
+  margin-bottom: @magicNumber;
+}
+
+strong, b{
+  font-weight: bold;
+}
+
+mark {
+  color: @colorMark;
+  background-color: @bgColorMark;
+}
+
+abbr[title] {
+
+}
+
+em,i,dfn{font-style:italic;}
+
+sub,sup{font-size:0.75em;line-height:0;position:relative;vertical-align: baseline;}
+sup{top:-0.5em;}
+sub{bottom:-0.25em;}
+
+
+/** --------------------------------------------------------------
+ * Display source code.
+ */
+pre{margin-bottom:1.375em;white-space:pre;}
+pre,code,kbd,samp,.code{font:1em/1.375 @fontFamilyMonospace;}
+
+p code,
+td > code {
+  white-space: nowrap;
+  border: 1px solid #ccc;
+  background-color: #f6f6f6;
+  padding: 0.1em 0.2em 0.1em 0.2em;
+  .border-radius(2px);
+}
+
+div.code{white-space:pre;}
+div.code, pre code{display:block;overflow:auto;}
+div.code, pre code, .geshi{border-top:1px solid #ccc;border-bottom:1px solid #ccc; padding-top:@magicNumber * 0.5;
+padding-bottom:@magicNumber * 0.5;margin-bottom:@magicNumber - 2px;background-color:#eee;padding-left:0.5em;}
+
+
+/** --------------------------------------------------------------
+ * Lists
+ */
+//ul,ol{margin:0.6875em 1.5em 1.375em 0;padding-left:1.5em;}
+ul,
+ol {
+  margin: 0 0 @magicNumber 0;
+  padding-left: 1.5em;
+  p {
+    margin-top: @magicNumber / 2;
+    margin-bottom: @magicNumber / 2;
+  }
+}
+
+li ul,
+li ol,
+ol ol,
+ul ul,
+ul ol,
+ol ul {
+  margin: 0;
+}
+
+ul {
+  margin-left: -8px;
+  list-style-type: none;
+}
+
+ol {
+  list-style-type:decimal;
+}
+
+dl {
+  margin:0 0 1.375em 0;
+}
+
+dt {
+  font-weight:bold;
+}
+
+dd {
+  margin-left:1.5em;
+}
+
+dl.dl-horizontal {
+  .clearfix();
+  @margin: 5em;
+  dt {
+    clear: left;
+    float: left;
+    width: @margin
+  }
+  dd {
+    margin-left: @margin + 1em;
+    display:block;
+  }
+}
+
+
+
+/** --------------------------------------------------------------
+ * Tables. Because of the need for padding on TH and TD, the vertical rhythm
+ * on table cells has to be 1.5*@magic-number.
+ */
+table {
+
+}
+
+article table,
+.table {
+  margin-bottom: @magicNumber;
+  width: 100%;
+}
+
+article caption,
+.table  caption {
+  text-align: left;
+  font-style: italic;
+}
+
+article thead,
+.table  thead {
+  border-bottom: 2px solid @colorTableHeaderBorder;
+}
+
+article th,
+.table  th {
+  vertical-align:bottom;font-weight:bold;text-align:left;
+}
+
+article th,
+article td,
+.table  th,
+.table  td {
+  // should use @magicNumber
+  padding: 5px 10px 5px 5px;
+}
+
+.table-striped tbody tr:nth-child(even) td,
+.table-striped tbody tr.even td {
+  background-color: @bgColorTableStripe;
+}
+
+article tbody tr,
+.table  tbody tr {
+  border-bottom: 1px solid @colorTableRowBorder;
+  &:hover {
+    color: @colorTableRowHover;
+    border-color: @colorTableRowBorderHover;
+  }
+}
+
+article tfoot,
+.table  tfoot {
+  font-style: italic;
+}
+
+
+
+/** --------------------------------------------------------------
+ * More
+ */
+hr {
+  color: @colorBorderLight;
+  border-color: @colorBorderLight;
+  margin: @magicNumber auto;
+}
+
+
+/** --------------------------------------------------------------
+ * CSS3 mixins.
+ *
+ */
+.border-radius(@radius:5px) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+          border-radius: @radius;
+}
+
+.box-shadow(@shadow:5px 5px 5px 5px @grey) {
+  -webkit-box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+          box-shadow: @shadow;
+}
+.transition(@property: all, @time: 1s, @timing: ease-in-out) {
+  -webkit-transition: @property @time @timing;
+     -moz-transition: @property @time @timing;
+      -ms-transition: @property @time @timing;
+       -o-transition: @property @time @timing;
+          transition: @property @time @timing;
+}
+.transition-property(@property: all) {
+  -webkit-transition-property: @property;
+     -moz-transition-property: @property;
+      -ms-transition-property: @property;
+       -o-transition-property: @property;
+          transition-property: @property;
+}
+.transition-duration(@time: 1s) {
+  -webkit-transition-duration: @time;
+     -moz-transition-duration: @time;
+      -ms-transition-duration: @time;
+       -o-transition-duration: @time;
+          transition-duration: @time;
+}
+.transition-timing-function(@timing: ease-in-out) {
+  -webkit-transition-timing-function: @timing;
+     -moz-transition-timing-function: @timing;
+      -ms-transition-timing-function: @timing;
+       -o-transition-timing-function: @timing;
+          transition-timing-function: @timing;
+}
+.rotate(@degrees) {
+  -webkit-transform: rotate(@degrees);
+     -moz-transform: rotate(@degrees);
+      -ms-transform: rotate(@degrees);
+       -o-transform: rotate(@degrees);
+          transform: rotate(@degrees);
+}
+.scale(@ratio) {
+  -webkit-transform: scale(@ratio);
+     -moz-transform: scale(@ratio);
+      -ms-transform: scale(@ratio);
+       -o-transform: scale(@ratio);
+          transform: scale(@ratio);
+}
+.skew(@x, @y) {
+  -webkit-transform: skew(@x, @y);
+     -moz-transform: skew(@x, @y);
+      -ms-transform: skew(@x, @y);
+       -o-transform: skew(@x, @y);
+          transform: skew(@x, @y);
+}
+.translate(@x, @y) {
+  -webkit-transform: translate(@x, @y);
+     -moz-transform: translate(@x, @y);
+      -ms-transform: translate(@x, @y);
+       -o-transform: translate(@x, @y);
+          transform: translate(@x, @y);
+}
+.translate3d(@x, @y, @z) {
+  -webkit-transform: translate(@x, @y, @z);
+     -moz-transform: translate(@x, @y, @z);
+      -ms-transform: translate(@x, @y, @z);
+       -o-transform: translate(@x, @y, @z);
+          transform: translate(@x, @y, @z);
+}
+.transform(@functions) {
+  -webkit-transform: @functions;
+     -moz-transform: @functions;
+      -ms-transform: @functions;
+       -o-transform: @functions;
+          transform: @functions;
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------------
+// Gradients
+#gradient {
+  .horizontal(@startColor: #555, @endColor: #333) {
+    background-color: @endColor;
+    background-image: -moz-linear-gradient(left, @startColor, @endColor); // FF 3.6+
+    background-image: -webkit-gradient(linear, 0 0, 100% 0, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+    background-image: -webkit-linear-gradient(left, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+    background-image: -o-linear-gradient(left, @startColor, @endColor); // Opera 11.10
+    background-image: linear-gradient(to right, @startColor, @endColor); // Standard, IE10
+    background-repeat: repeat-x;
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@startColor),argb(@endColor))); // IE9 and down
+  }
+  .vertical(@startColor: #555, @endColor: #333) {
+    background-color: mix(@startColor, @endColor, 60%);
+    background-image: -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+    background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+    background-image: -o-linear-gradient(top, @startColor, @endColor); // Opera 11.10
+    background-image: linear-gradient(to bottom, @startColor, @endColor); // Standard, IE10
+    background-repeat: repeat-x;
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor))); // IE9 and down
+  }
+  .directional(@startColor: #555, @endColor: #333, @deg: 45deg) {
+    background-color: @endColor;
+    background-repeat: repeat-x;
+    background-image: -moz-linear-gradient(@deg, @startColor, @endColor); // FF 3.6+
+    background-image: -webkit-linear-gradient(@deg, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+    background-image: -o-linear-gradient(@deg, @startColor, @endColor); // Opera 11.10
+    background-image: linear-gradient(@deg, @startColor, @endColor); // Standard, IE10
+  }
+  .vertical-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f) {
+    background-color: mix(@midColor, @endColor, 80%);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), color-stop(@colorStop, @midColor), to(@endColor));
+    background-image: -webkit-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+    background-image: -moz-linear-gradient(top, @startColor, @midColor @colorStop, @endColor);
+    background-image: -o-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+    background-image: linear-gradient(@startColor, @midColor @colorStop, @endColor);
+    background-repeat: no-repeat;
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor))); // IE9 and down, gets no color-stop at all for proper fallback
+  }
+  .radial(@innerColor: #555, @outerColor: #333) {
+    background-color: @outerColor;
+    background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(@innerColor), to(@outerColor));
+    background-image: -webkit-radial-gradient(circle, @innerColor, @outerColor);
+    background-image: -moz-radial-gradient(circle, @innerColor, @outerColor);
+    background-image: -o-radial-gradient(circle, @innerColor, @outerColor);
+    background-repeat: no-repeat;
+  }
+  .striped(@color: #555, @angle: 45deg) {
+    background-color: @color;
+    background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, rgba(255,255,255,.15)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255,255,255,.15)), color-stop(.75, rgba(255,255,255,.15)), color-stop(.75, transparent), to(transparent));
+    background-image: -webkit-linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+    background-image: -moz-linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+  }
+}
+// Reset filters for IE
+.reset-filter() {
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
+}
+
+//-----------------------------------------------------------------------------------------------------------------------------------------
+
+/** ------------------------------------------------------------------
+ * Mixins
+ */
+
+
+/** ------------------------------------------------------------------
+ * The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+.clearfix() {
+  *zoom:1;
+  &:before, &:after {
+    content:"";display:table;
+  }
+  &:after {
+    clear:both;
+  }
+}
+
+
+/** ------------------------------------------------------------------
+ * Wrap elements to site width in grid layout
+ */
+.wrap(@extra-width: 0) {
+  width: @total-width + @extra-width;
+  margin: 0 auto;
+  .clearfix();
+}
+
+
+/** ------------------------------------------------------------------
+ * Always show the scrollbar
+ */
+.alwaysShowScrollbar() {
+  overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll;
+}
+
+
+/** ------------------------------------------------------------------
+ * Typography. Calculate font-size and line-height.
+ */
+.body-font() {
+  //font: @font-size/(@magic-number/@font-size) @@font-family-body;
+  font: 100.01%/(unit((@magicNumber)/unit(@fontSizeBody))) @fontFamilyBody;
+}
+
+.font-size(@fontSize) {
+  font-size: @fontSize;
+}
+
+.font-size(@fontSize) when (@fontSize > 1) and (@fontSize*@fontSizeBody < @magicNumber) {
+  line-height: unit(@magicNumber/(@fontSize*@fontSizeBody));
+}
+
+.font-size(@fontSize) when (@fontSize > @magicNumber/@fontSizeBody) and (@fontSize*@fontSizeBody > @magicNumber) and (@fontSize*@fontSizeBody < @magicNumber*2) {
+  line-height: unit(@magicNumber*2/(@fontSize*@fontSizeBody));
+}
+
+
+// 5/4 for smaller font-size, incremental leading.
+
+
+/** ------------------------------------------------------------------
+ * Anchors.
+ */
+.anchor-none(@color: inherit) {
+  a {
+    color: @color;
+    text-decoration: none;
+  }
+}
+
+.anchor-anonymous(@color: inherit, @hover: @anchorColorHover) {
+  a {
+    color: @color;
+    text-decoration: none;
+    &:hover {
+      color: @hover;
+      text-decoration: underline;
+    }
+  }
+}
+
+.anchor(@color: inherit, @hover: inherit, @visited: inherit) {
+  a {
+    color: @color;
+    text-decoration: underline;
+    &:visited {
+      color: @visited;
+    }
+    &:hover {
+      color: @hover;
+      text-decoration: none;
+    }
+  }
+}
+
+
+/*.link-no-style(){
+  a{color:inherit;text-decoration:none;
+    &:hover{color:@anchorColor;text-decoration:underline;}
+  }
+}*/
+

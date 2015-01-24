@@ -1,0 +1,206 @@
+/**
+ * General elements
+ */
+
+@import url(figure.css);
+
+body {
+  color: #333;
+  font-family: arial, sans-serif;
+  overflow-y: scroll;
+  margin: 0px;
+}
+
+h1 {
+  font-size: 2.2em;
+}
+
+
+/**
+ * Layout of the main page elements
+ */
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 980px;
+  padding: 0px 10 0px 10px;
+}
+
+/**
+ * Layout for header
+ */
+#header {
+  background-color: #0471BF;
+  position: relative;
+}
+
+.sitetitle {
+  position: absolute;
+  top: 6px;
+  left: 130px;
+  font-size: 48px;
+  color: #EEE
+}
+
+.siteslogan {
+  position: absolute;
+  top: 65px;
+  left: 130px;
+  font-style: italic;
+  color: #DDD;
+}
+
+.siteslogan {
+  position: absolute;
+  top: 65px;
+  left: 130px;
+  font-style: italic;
+  color: #DDD;
+}
+
+.sitelogo {
+
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+
+/**
+ * Layout for main
+ */
+#main {
+  min-height: 20em;
+}
+
+
+/**
+ * Layout for footer
+ */
+#footer {
+  margin-top: 40px;
+  border-top: 1px solid #ccc;
+  padding-top: 22px;
+}
+
+.sitefooter {
+  color: #666;
+}
+
+
+/**
+ * For articles
+ */
+.article1 {
+  width: 700px;
+  border-right: 1px solid #ccc;
+  padding-right: 1em;
+}
+
+.article1 h1,
+.article1 h2 {
+  border-bottom: 1px solid #ccc;
+}
+
+.byline {
+  margin-top: 44px;
+  border-top: 1px dashed #ccc;
+  padding-top: 22px;
+  color: #666;
+}
+
+.byline p {
+  margin-top: 0;
+}
+
+.comment-form {
+
+   width: 718px;
+
+}
+
+.comment-form p{
+
+   float: left;
+   margin-top: 5px;
+   margin-bottom: 5px;
+   margin-right: 8px;
+   margin-left: 8px;
+   font-size: 0.9em;
+
+
+}
+
+.buttons{
+
+   clear: both;
+   margin-bottom: 5px;
+
+}
+
+.comment-form input[type=text]{
+
+  width: 150px;
+
+}
+
+.comment-form textarea{
+
+  width: 642px;
+  height: 100px;
+
+}
+
+.comments em {
+
+  display: block;
+  clear: both;
+  font-size: 0.8em;
+  color: #0471BF;
+  margin-top:  2px;
+  margin-left: 10px;
+}
+
+.comments {
+
+  width: 718px;
+}
+
+#comment {
+
+  border-style: outset;
+  border-width: 1px;
+}
+
+
+.comments h4 {
+
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+#poster {
+
+  float: left;
+  height: 140px;
+  width: 200px;
+  margin-right: 10px;
+  border-style: outset;
+  border-bottom: none;
+}
+
+#poster input[type=submit] {
+
+  font-size: 0.7em;
+  color: #FFF;
+  background-color: #0471BF;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+#content {
+
+  height: 127px;
+
+}
+
+

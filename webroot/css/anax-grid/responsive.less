@@ -1,0 +1,123 @@
+
+@media (min-width: 480px) {
+
+    #wrapper {
+        width: 438px;
+    }
+
+    #featured-1,
+    #featured-2,
+    #featured-3,
+    #triptych-1,
+    #triptych-2,
+    #triptych-3  {
+        .column(@columns);
+        margin-bottom: @magicNumber;
+    }
+
+    #footer-col-1,
+    #footer-col-2,
+    #footer-col-3,
+    #footer-col-4  {
+        .column(@columns);
+        margin-bottom: @magicNumber;
+    }
+
+    .sitetitle {
+        font-size: 24px;
+    }
+
+    #main {
+    .column(@columns);
+    min-height: @min-column-height;
+    margin-bottom: @margin-bottom-colum;
+    }
+
+    #sidebar {
+        .column(@columns);
+        min-height: @min-column-height;
+        margin-bottom: @margin-bottom-colum;
+    }
+}
+
+@media (min-width: 768px) {
+
+    #footer-col-1,
+    #footer-col-2,
+    #footer-col-3,
+    #footer-col-4  {
+        .column(@columns / 2);
+        margin-bottom: @magicNumber;
+    }
+
+    #wrapper {
+        width: 726px;
+    }
+
+    #featured-1,
+    #featured-2,
+    #featured-3,
+    #triptych-1,
+    #triptych-2,
+    #triptych-3  {
+        .column(@columns / 3);
+        margin-bottom: @magicNumber;
+    }
+
+    .sitetitle {
+        font-size: 42px;
+    }
+
+    #main {
+        .column(@columns / 3 * 2);
+        min-height: @min-column-height;
+        margin-bottom: @margin-bottom-colum;
+    }
+
+    #sidebar {
+        .column(@columns / 3);
+        min-height: @min-column-height;
+        margin-bottom: @margin-bottom-colum;
+    }
+}
+
+@media (min-width: 992px) {
+
+    #wrapper {
+        width: 950px;
+    }
+
+    #footer-col-1,
+    #footer-col-2,
+    #footer-col-3,
+    #footer-col-4  {
+        .column(@columns / 4);
+        margin-bottom: @magicNumber;
+    }
+
+    #featured-1,
+    #featured-2,
+    #featured-3,
+    #triptych-1,
+    #triptych-2,
+    #triptych-3  {
+        .column(@columns / 3);
+        margin-bottom: @magicNumber;
+    }
+
+    .sitetitle {
+        font-size: 48px;
+    }
+
+    #main {
+        .column(@columns / 3 * 2);
+        min-height: @min-column-height;
+        margin-bottom: @margin-bottom-colum;
+    }
+
+    #sidebar {
+        .column(@columns / 3);
+        min-height: @min-column-height;
+        margin-bottom: @margin-bottom-colum;
+    }
+}

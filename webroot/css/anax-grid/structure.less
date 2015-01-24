@@ -1,0 +1,143 @@
+/**
+ * General elements
+ */
+
+@import url(figure.css);
+
+body {
+  color: #333;
+  font-family: arial, sans-serif;
+  overflow-y: scroll;
+  margin: 0px;
+}
+
+#header,
+#navbar,
+#flash,
+#footer {
+    .column(@columns);
+}
+
+// #main {
+//     .column(@columns / 3 * 2);
+//     min-height: @min-column-height;
+//     margin-bottom: @margin-bottom-colum;
+// }
+
+#flash {
+    min-height: @min-column-height;
+    margin-bottom: @margin-bottom-colum;
+}
+
+// #sidebar {
+//     .column(@columns / 3);
+//     min-height: @min-column-height;
+//     margin-bottom: @margin-bottom-colum;
+// }
+
+// #featured-1,
+// #featured-2,
+// #featured-3,
+// #triptych-1,
+// #triptych-2,
+// #triptych-3 {
+//     .column(@columns / 3);
+//     min-height: @min-column-height;
+//     margin-bottom: @margin-bottom-colum;
+// }
+
+
+
+#wrap-featured,
+#wrap-main,
+#wrap-triptych,
+#wrap-footer-col {
+    .clearfix();
+}
+
+#wrapper {
+  margin: 0 auto;
+  background-color: #F9F9F9;
+  max-width: 1200px;
+  padding: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/**
+ * Layout for header
+ */
+#header {
+  position: relative;
+  margin-bottom: 10px;
+  background-color: #0471BF;
+  width: 100%;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+#header img {
+
+    margin-left: 8px;
+}
+
+.sitetitle {
+  position: absolute;
+  top: 6px;
+  left: 130px;
+  color: #FFF;
+}
+
+.siteslogan {
+  position: absolute;
+  top: 65px;
+  left: 130px;
+  font-style: italic;
+  color: #CCC;
+}
+
+/**
+ * Layout for footer
+ */
+#footer {
+  margin-top: 40px;
+  border-top: 1px solid #ccc;
+  padding-top: 22px;
+}
+
+.sitefooter {
+  color: #666;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 980px;
+  padding: 0px 10 0px 10px;
+}
+
+/**
+ * For articles
+ */
+.article1 {
+  width: 700px;
+  border-right: 1px solid #ccc;
+  padding-right: 1em;
+}
+
+.article1 h1,
+.article1 h2 {
+  border-bottom: 1px solid #ccc;
+}
+
+.byline {
+  margin-top: 44px;
+  border-top: 1px dashed #ccc;
+  padding-top: 22px;
+  color: #666;
+}
+
+.byline p {
+  margin-top: 0;
+}
+

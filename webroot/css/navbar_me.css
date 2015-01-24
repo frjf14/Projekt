@@ -1,0 +1,72 @@
+/**
+ * Based on http://dbwebb.se/coachen/en-navbar-med-drop-down-meny-i-ren-html-och-css
+ * Changed to only style li-items instead of a.
+ */
+#navbar {
+
+  background: linear-gradient(to right, #057ed4, #10c1f0);
+}
+ 
+.navbar ul {
+  list-style: none; 
+  margin: 0; 
+  padding: 0;
+}
+ 
+.navbar li {
+  display: inline-block;
+  color: #DDD; 
+  position: relative; 
+}
+ 
+.navbar a {
+  display: block;
+  width: 100%;
+  padding: 0.8em;
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap; 
+  -webkit-transition: color .3s linear;
+  -moz-transition: color .3s linear;
+  -ms-transition: color .3s linear;
+  -o-transition: color .3s linear;
+  transition: color .3s linear;
+
+}
+
+.navbar li:hover {
+  color: #FFF; 
+  border-color: #FFF;
+} 
+ 
+.navbar li.selected-parent, 
+.navbar li.selected {
+  color: #FFF; 
+}
+
+.navbar ul ul {
+  background-color: #fff; 
+  padding: 8px; 
+  position: absolute; 
+  left: -9999px; 
+  z-index: 2;
+}
+ 
+.navbar li li {
+  border-top: none;  
+  border-left: 4px solid transparent;  
+}
+
+.navbar li:hover ul {
+  left: 0;
+}
+ 
+.navbar li li:hover {
+  color: #666; 
+  border-color: #666;
+}
+
+.navbar li li.selected {
+  color: #0471BF; 
+  border-color: #0471BF;
+}
